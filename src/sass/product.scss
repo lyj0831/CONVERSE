@@ -1,0 +1,402 @@
+// 商品详情
+.buy_product{
+    width: 1100px;
+    margin: 70px auto 100px; 
+    display: flex;
+    margin-bottom: 10px;
+    .buy_left{
+        width: 30%;
+        overflow: hidden;
+        a{
+            display: block;
+            color: black;
+            margin: 20px 15px;
+            &:nth-child(1){
+                display: flex;
+                align-items: center;
+                & span{
+                    background: url(../image/detail.png) 0px 0px;
+                }
+            }
+            &:nth-child(2){
+                display: flex;
+                align-items: center;
+                & span{
+                    background: url(../image/detail.png) 0px -40px;
+                }
+            }
+            span{
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+            }
+        }
+        #span1{
+            display: block;
+            width: 100px;
+            height: 30px;
+            background: url(../image/stars.png) 0 0 repeat-x ;
+            margin-left: 15px;
+            
+        }
+    }
+    .buy_middle{
+        #b_top{
+            display: inline-block;
+            margin: 0 auto;
+            width: 400px;
+            font-size: 22px;
+            line-height: 40px;
+            text-align: center;
+            margin-left: -10px;
+
+        }
+        width: 40%;
+        clear: both;   
+        position: relative;
+        .p{
+            display: block;
+        }     
+        //放大镜
+        .wai{
+            .one {
+                width: 450px;
+                height: 450px;
+                margin-left:-20px ;
+                position: relative;
+                span {
+                  width: 90px;
+                  height: 214px;
+                  position: absolute;
+                  border: 1px solid #afafaf;
+                  top: 0;
+                  left: 0;
+                  background-color: white;
+                  opacity: .5;
+                  display: none;
+                }
+                img{
+                    width: 450px;
+                }
+                &:hover {
+                    span {
+                        display: block;
+                    }
+                }
+            }
+            .two {
+                padding: 10px 18px;
+                img{
+                border: 1px solid #ccc;
+                width: 60px;          
+                &:hover{
+                  border: 1px solid red;
+                }
+              }
+              .active1 {
+                border: 1px solid red;
+              }
+            }
+        }
+          .the {
+            width: 270px;
+            height: 500px;
+            position: absolute;
+            overflow: hidden;
+            top: -10px;
+            left: -280px;
+            border: 1px solid #969696;
+            display: none;
+            background-color: white;
+            img {
+              position: absolute;
+              display: block;
+            } 
+          }
+          //说明
+        .explain{
+            width: 100%;
+            i{
+                display: block;
+                font-style: normal;
+                margin: 15px auto 10px -80px;
+            }
+            h4{
+                line-height: 50px;
+            }
+            p{
+                line-height: 1.8;
+                font-size: 12px;
+            }
+            a{
+                display: block;
+                width: 180px;
+                height: 48px;
+                color:white;
+                text-align: center;
+                line-height: 50px;
+                background-color: #000;
+                font-size: 16px;
+                margin: 40px auto 0;
+                cursor: pointer;
+                border: 1px solid #000;
+                &:hover{
+                    color:black;
+                    background-color:white;
+                    transition: .5s;
+                }
+            }
+        }
+    }
+    .buy_right{
+        width: 30%;
+        .choice_color{
+           width: 100%;
+           height: 60px;
+           a{
+               display: inline-block;
+               padding: 3px;
+               img{
+                   width: 37px;
+               }
+               &:nth-child(1){
+                   border: 1px solid black;
+               }
+            }
+        }
+        p{
+            margin : 10px 0;
+            a{
+                color: black;
+            }
+        }
+        .size_chart{
+            display: flex;
+            align-items: center;
+            width: 200px;
+            padding: 20px 0;
+            border-bottom: 1px solid gray;
+            i{
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background: url(../image/sprites_account.png) -10px -138px;
+            }
+            span{
+                color: black;
+            }
+        }
+        h4{
+            padding: 10px 0;
+        }
+        .jq22{
+            width: 200px;
+            height: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+            select{
+                width: 95px;
+                height: 30px;
+            }
+        }
+        #buy{
+            display: block;
+            width: 200px;
+            height: 50px;
+            background-color: rgb(140, 15, 15);
+            color: white;
+            font-size: 20px;
+            line-height: 50px;
+            text-align: center;
+            margin:10px 0 2px 0;
+            &:hover{
+                opacity: .5;
+                transition: .5s;
+            }
+        }
+        #carts{
+            display: block;
+            width: 200px;
+            height: 50px;
+            background-color: rgb(140, 15, 15);
+            color: white;
+            font-size: 20px;
+            line-height: 50px;
+            text-align: center;
+            &:hover{
+                opacity: .5;
+                transition: .5s;
+            }
+        }
+    }
+}
+
+//猜你喜欢
+.you_like{
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    margin: 0 auto;
+    span{
+        display: inline-block;
+        width: 300px;
+        height: 1px;
+        border: 1px rgb(106, 102, 102) solid;
+        margin: 50px 0 50px;
+    }
+    i{
+        font-style: normal;
+        font-size: 30px;
+    }
+}
+//评论
+.comment{
+    width: 1100px;
+    .comment_star{
+        padding: 20px auto 30px;
+        width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        .comment_star_span{
+            border: none;
+            display: inline-block;
+            width: 175px;
+            height: 35px;
+            background: url(../image/larger-star.png) 0px -6px;
+        }
+        & b{
+            font-size: 35px;
+            display: inline-block;
+            width: 30px;
+            height: 35px;
+            color:rgb(187, 52, 52);
+            line-height: 35px;
+            
+        }
+    }
+    .comment_span{
+        width: 380px;
+    }
+    span{
+        &:nth-child(1){
+            width: 464px
+        }
+        &:nth-child(3){
+            width: 464px
+        }
+    }
+    //最近查看
+    .recent_view{
+        width: 100%;
+    }
+}
+
+//轮播图
+  /* 必要布局样式css */
+  .clearfix {
+    &::after {
+      clear: both;
+      content: ".";
+      display: block;
+      height: 0;
+      visibility: hidden;
+    }
+  }
+  .slide-item-body {
+    width: 1000px;
+    ul {
+      padding-top: 10px;
+      overflow: visible;
+      li {
+        width: 250px;
+        height: 300px;
+        float: left;
+        display: block;
+        border: none;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        color: #000;
+        z-index: 10002;
+        a {
+          display: block;
+          box-sizing: border-box;
+        }
+        &:hover {
+          z-index: 1002;
+          border: 1px solid black;
+        }
+      }
+    }
+  }
+  //图片
+  .new-img {
+    img {
+      width: 165px;
+      height: 165px;
+      border: none;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  //大盒子
+  .slide-item {
+    width: 1000px;
+    position: relative;
+    margin: 0 auto;
+  }
+  //信息 价格
+  .new-body {
+    padding: 20px 20px 40px 20px;
+  }
+  .new-body-title {
+    line-height: 30px;
+    font-size: 12px;
+    overflow: hidden;
+    color: black;
+    font-weight: 900;
+    padding-left: 20px;
+  }
+  .new-body-text {
+    text-align: center;
+    padding-bottom: 20px;
+    line-height: 18px;
+    font-size: 12px;
+    color:black;
+    font-weight: 900;
+    overflow: hidden;
+  }
+  .next {
+    position: absolute;
+    top: 40%;
+    right: -4.2%;
+    z-index: 10;
+    cursor: pointer;
+    height: 40px;
+    width: 21px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background: url("../image/sprites_icon.png") 0px 0px;
+  }
+  .prev {
+    position: absolute;
+    top: 40%;
+    left: -4.2%;
+    z-index: 10;
+    cursor: pointer;
+    height: 40px;
+    width: 21px;
+    background: url("../image/sprites_icon.png")0 -45px;
+  }

@@ -1,0 +1,41 @@
+/*public*/
+/* .fl{display:inline;float:left} */
+/* 上边的四张图片 */
+.fr{display:flex; justify-content: space-around; float:left;position: relative; top: -80px;width: 1150px;margin-right: 0;overflow: hidden;}
+/* .cf:after{content:"";clear:both;display:block;height:0;overflow:hidden;background-color: green;;} */
+.cf{zoom:1;}
+/* 下边每个商品信息 */
+.pb10{padding-bottom:10px;}
+.mt10{margin-top:10px;}
+/*main*/
+/* 大盒子 */
+.lanrenzhijia{width:1150px;margin: 50px auto;background:#fff;}
+/* 包裹上边图片 */
+/* .lanrenzhijia .title{height:20px;border-bottom: 3px solid #e7e7e7;padding-bottom:10px;background-color: chartreuse;} */
+/* 包裹上边图片 */
+/* .lanrenzhijia .title-list{ position: relative; top:6px;background-color: cyan;} */
+.lanrenzhijia .title-list{
+    margin-top: 50px;
+}
+.lanrenzhijia .title-list li{ width: 200px; line-height: 20px; text-align: center; float: left; display: inline;}
+/* 黄色横条 */
+.lanrenzhijia .title-list li.on{ color: #ff6600; font-weight: bold;}
+
+
+.lanrenzhijia .title-list p{position:absolute;top:200px;left:75px;width:146px;height:7px;border-top: 3px solid #ff6600;  text-align: center;background-color: darkmagenta;}
+
+
+.lanrenzhijia .title-list b{display:inline-block;width:0;height:0;margin-top:-3px;border-style:solid dashed dashed dashed;border-width:9px;border-color: #ff6600 #fff #fff #fff;;zoom: 1;font-size: 18px;}
+
+
+
+
+.product{ height: 268px; position: relative; overflow: hidden; display: none; margin-top: 20px;}
+.product ul{ position: absolute; left: 0px;}
+.product-wrap .show{ display: block;}
+.product-wrap .product li{ float: left; display: inline; margin-left: 13px;background: #f3f3f3;border: 2px solid #fafafa; transition:0.4s;-webkit-transition:0.4s;-moz-transition: 0.4s;-o-transition: 0.4s;-ms-transition: 0.4s;}
+.product-wrap .product li.ml0{margin-left:0px;}
+.product-wrap .product li a.imgwrap{ display: block; width: 226px; height: 200px; background: #fff; text-align:center;}
+.product-wrap .product li p{padding-left: 15px;color: #666666;line-height: 22px;}
+.product-wrap .product li p a{ color: #666666; text-decoration: none;}
+.product-wrap .product li p a:hover{ color: #ff6600; text-decoration: none;}
