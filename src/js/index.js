@@ -7,7 +7,6 @@ $("#right_box a:first").click(function(){
 })
 
 // 导航栏划过i效果
-console.log($("#right_box a:first"));
 $("nav #nav ul li a").each(function(i,value){          
     $(this).hover(function(){
         $(`.nav_marks${i + 1}`).css("display","block").css("opacity",1); 
@@ -58,3 +57,15 @@ $(window).scroll(function(){
         $("body").css("padding-top","120px");
     }
 });
+//注册登录页切换
+$("#login_butn").click(function(){
+    $("#mark_white").animate({opacity : 1},600).css("display","block");
+    $("#mark_registor").animate({opacity : 0},600).css("display","none");
+})
+$("#registor_butn").click(function(){
+    $("#mark_registor").animate({opacity : 1},600).css("display","block");
+    $("#mark_white").animate({opacity : 0},600).css("display","none");
+})
+
+
+

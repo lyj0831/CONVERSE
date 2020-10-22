@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./lib/slideshow.css">  
     <link rel="stylesheet" href="./lib/jq22.css">
 </head>
-<body>
+<body> 
     <!-- 遮罩层 -->
     <div id="mark">
         <div id="mark_white">
@@ -21,8 +21,131 @@
                 </a>
             </div>
             <div id="login_right">
-
+                <div class="main">
+                    <div class="login">
+                        <div class="log-con">
+                            <span><h3>您已注册会员？</h3></span>
+                            <input type="text" class="name" placeholder="请输入用户名"/>
+                            <input type="text" class="password" placeholder="请输入密码"/>
+                            <input type="text" class="code" placeholder="请输入验证码"/>
+                            <input type="button" id="code"/>
+                            <p onclick="change();">换一张</p>
+                            <div id="chosen">一旦登录，即表明您同意匡威更新的 <a href="javascript:;">隐私政策</a>和 <a href="javascript:;">使用规则</a> </div>
+                            <a>立即登录</a>
+                            <div id="bottom_login">
+                                <div id="rem_user">记住登录名</div>
+                                <a href="javascript:;">忘记密码?</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div id="mark_registor">
+            <div class="mark_reg">
+                <div>
+                    <p>手机号<i>*</i></p>
+                    <input type="text" placeholder="135xxxx3333" id="ucell">
+                    <span></span>
+                    <p>输入密码<i>*</i></p>
+                    <input type="password" placeholder="密码至少为8位字符" id="upwd">
+                    <span></span>
+                    <p>验证码<i>*</i></p>
+                    <input type="text" placeholder="请输入验证码" class="registor_pic" id="ucode">
+                    <canvas id="canvas" ></canvas>
+                    <span></span>
+                    <a href="javascript:;" id="registor_btn" >换一张</a>
+                </div>
+                <div>
+                    <p>邮箱<i>*</i></p>
+                    <input type="text" id="uemail" placeholder="pxamlpe@converse.com">
+                    <span></span>
+                    <p>确认密码<i>*</i></p>
+                    <input type="text" id="usure" placeholder="请再次输入密码">
+                    <span></span>
+                    <p>短信验证码<i>*</i></p>
+                    <input type="text" id="ucell_code" class="registor_pic">
+                    <input type="button" value="发送短信验证码" class="registor_message">
+                    <span></span>
+                </div>
+                <div>
+                    <p>性别<i>*</i></p>
+                    <input type="radio" name="a" id="man" value="男" checked> <label for="man"> &nbsp;男的</label>
+                    <input type="radio" name="a" id="women" value="女"><label for="women"> &nbsp;女的</label>
+                    <p>生日（年-月-日）<i>*</i></p>
+                    <select name="" id="uyear" size: 6;>
+                        <option>2019</option>
+                        <option>2018</option>
+                        <option>2017</option>
+                        <option>2016</option>
+                        <option>2015</option>
+                        <option>2014</option>
+                        <option>2013</option>
+                        <option>2012</option>
+                        <option>2011</option>
+                        <option>2010</option>
+                        <option>2009</option>
+                        <option>2008</option>
+                        <option>2007</option>
+                        <option>2006</option>
+                        <option>2005</option>
+                    </select>         
+                    <select name="" id="umonth">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>            
+                    <select name="" id="udate">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                        <option>27</option>
+                        <option>28</option>
+                        <option>29</option>
+                        <option>30</option>
+                        <option>31</option>
+                    </select>
+                    <br>
+                     <label for="registor_check" id="label_registor_check"><input type="checkbox" id="registor_check"> 一旦创建账户，即表明您同意匡威更新的隐私政策和使用规则</label>
+                    <i class="registor_user_btn   registor_user_btn1 ">注册账户</i>
+                    <a href="javascript:;" class=" registor_user_btn  registor_user_btn2" >注册账户
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+            
         </div>
 
     </div>
@@ -39,8 +162,8 @@
         </div>
         <!-- 登录注册 -->
         <div id="right_box">
-            <a href="javascript:;">登录</a>/
-            <a href="javascript:;">注册</a>&nbsp;&nbsp;&nbsp;
+            <a href="javascript:;" id="login_butn">登录</a>/
+            <a href="javascript:;" id="registor_butn">注册</a>&nbsp;&nbsp;&nbsp;
             <a href="javascript:;"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="javascript:;">购物车</a>&nbsp;&nbsp;&nbsp;
             <p>0</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -636,14 +759,14 @@
         <p>@匡威体育用品（中国）有限公司 保留所有权利&nbsp;&nbsp;&nbsp;<a href="javascript:;">沪ICP备11044134号-2</a>&nbsp;&nbsp;&nbsp;<a href="javascript:;"><img src="./image/beiAn.png" alt=""> 沪公网安备 31011002001667号</a>&nbsp;&nbsp;&nbsp;  <a href="javascript:;"><img src="./image/business-license.png" alt="">电子营业执照 </a>&nbsp;&nbsp;&nbsp;<a href="javascript:;">公司证照</a></p>
         <a href="javascript:;" id="place_call"><img src="./image/cautionIcon.png" alt=""></a>
     </div>
-
-
       <script src="./lib/jquery-1.12.4.min.js"></script>
       <script src="./lib/bootstrap.min.js"></script>
       <script src="./lib/jquery.cookie.js"></script>
-      <script src="./js/index.js"></script>/。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ，                                                                                                            
-      <script src="./lib/slideshow.js"></script>
+      <script src="./js/registor.js"></script>
+      <script src="./js/login.js"></script>
+      <script src="./js/index.js"></script>
       <script src="./lib/jq22.js"></script>
-      <script src="./lib/jquery.SelectorSlide.2.1.1.js"></script>
+      <script src="./lib/jquery.SuperSlide.2.1.1.js"></script>
+      <script src="./lib/slideshow.js"></script>
 </body>
 </html>
