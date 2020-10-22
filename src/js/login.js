@@ -32,3 +32,33 @@ function change() {
 // $("#chosen").before(content).css("background","");
 $("#chosen").addClass("change");
 $("#rem_user").addClass("changerem");
+
+
+//验证登录
+$("#login_btn").click(function(){
+    //获取用户名
+    let uname = $("#login_uname").val();
+    //密码
+    let upwd = $("#login_upwd").val();
+    //验证码
+    // let login_code = $("#login_ucode");
+    // let code = $("#code");
+    //获取cookie
+    let cookie_str = $.cookie("users")?$.cookie("users"):"";
+    let cookie_obj = convertStrToObj(cookie_str);
+    console.log(cookie_obj);
+    //判断
+    if(uname in cookie_obj){
+        if(upwd == cookie_obj[uname].pwd){
+            if($("#login_ucode").val() == $("#code").val()){
+                alert("登录成功！");
+            }else{
+                alert("验证码错误");
+            }
+        }else{
+            alert("密码错误！");
+        }
+    }else{
+        alert("用户名不存在！");
+    }
+})

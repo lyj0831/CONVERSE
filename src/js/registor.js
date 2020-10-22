@@ -86,9 +86,8 @@ $(function() {
 // 正则验证
 //手机号
 $("#ucell").blur(function(){
-	let ucell = $("#ucell").val();
 	let re = /^\d{11}$/;
-	if(!re.test(ucell)){
+	if(!re.test($("#ucell").val())){
 		$(this).next().text("请输入11位有效中国手机号码！").css("color","red");
 	}else{
 		$(this).next().text("");
@@ -132,9 +131,9 @@ $("#usure").blur(function(){
 	}
 })
 //判断男女
-let sex = $(":radio:checked").val();
+// let sex = $(":radio:checked").val();
 //生日
-let brother = $("#uyear").val() + "年" + parseInt($("#umonth").val()) + "月" + $("#udate").val() + "日";
+// let brother = $("#uyear").val() + "年" + parseInt($("#umonth").val()) + "月" + $("#udate").val() + "日";
 //阅读政策和使用规则
 $("#registor_check").click(function(){
 	if($(this).is(':checked')){
@@ -145,3 +144,50 @@ $("#registor_check").click(function(){
 		$(".registor_user_btn2").css("display","none");
 	}
 })
+//存入cookie
+//验证
+$(".registor_user_btn2").click(
+	function(){
+		// 获取手机号
+		let ucell = $("#ucell").val();
+		//密码
+		let upwd = $("#upwd").val();
+		//邮箱
+		let uemail = $("#uemail").val();
+		//性别
+		let usex = $(":radio:checked").val();
+		//生日
+		let ubirthday = $("#uyear").val() + "年" + parseInt($("#umonth").val()) + "月" + $("#udate").val() + "日";
+		//获取cookie
+		let cookie_str = $.cookie("users") ? $.cookie("users") : "";
+		//转为对象
+		let cookie_obj = convertStrToObj(cookie_str);
+			//判断是否存在
+		if(ucell in cookie_obj){
+			alert("用户名已存在！");
+		}else{
+			//添加cookie
+			cookie_obj[ucell] = {
+				pwd : upwd,
+				sex : usex,
+				email : uemail,
+				birthday : ubirthday
+			};//账号密码
+			//存到cookie
+			$.cookie("users",JSON.stringify(cookie_obj));
+			alert("注册成功！");
+		}
+	})
+
+
+
+	
+// 字符串转位对象方法
+function convertStrToObj(str){
+	if(!str){
+		return {};
+	}else{
+		return JSON.parse(str);
+	}
+}
+ 

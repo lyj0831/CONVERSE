@@ -25,13 +25,13 @@
                     <div class="login">
                         <div class="log-con">
                             <span><h3>您已注册会员？</h3></span>
-                            <input type="text" class="name" placeholder="请输入用户名"/>
-                            <input type="text" class="password" placeholder="请输入密码"/>
-                            <input type="text" class="code" placeholder="请输入验证码"/>
+                            <input type="text" class="name" id="login_uname" placeholder="请输入用户名"/>
+                            <input type="text" class="password" id="login_upwd" placeholder="请输入密码"/>
+                            <input type="text" class="code" id="login_ucode"  placeholder="请输入验证码"/>
                             <input type="button" id="code"/>
                             <p onclick="change();">换一张</p>
                             <div id="chosen">一旦登录，即表明您同意匡威更新的 <a href="javascript:;">隐私政策</a>和 <a href="javascript:;">使用规则</a> </div>
-                            <a>立即登录</a>
+                            <a id="login_btn">立即登录</a>
                             <div id="bottom_login">
                                 <div id="rem_user">记住登录名</div>
                                 <a href="javascript:;">忘记密码?</a>
@@ -378,8 +378,6 @@
                 </a>
         </div>
     </div>
-<br>
-<br>
 <br>
 <br>
 <br>

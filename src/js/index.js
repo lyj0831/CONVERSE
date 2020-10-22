@@ -3,9 +3,39 @@ $("#right_box a:first").click(function(){
     $("#mark").animate({
         top : 80
     },500)
-    // console.log($("#right_box a:first"));
+})
+$("#mark").click(function(evt){
+    $(this).animate({
+        top : "-100%"
+    },500)
+    stopBubble(evt);
+});
+$("#mark_white").bind("click",(
+    function(){
+        return false;
+    }
+))
+
+$("#mark_registor").bind("click",(
+    function(){
+        return false;
+    }
+))
+$("#right_box a").eq(1).click(function(){
+    $("#mark").animate({
+        top : 80
+    },500);
+    $("#mark_white").css("display" ,"none");
+    $("#mark_registor").css("display" , "block")
 })
 
+
+//阻止事件冒泡
+function stopBubble(evt){
+    let e = evt || window.event;
+    return e.stopPropagation? e.stopPropagation() : e.cancelBubble = true;
+}
+// stopBubble(evt);
 // 导航栏划过i效果
 $("nav #nav ul li a").each(function(i,value){          
     $(this).hover(function(){
@@ -23,7 +53,6 @@ $("nav #nav ul li a").each(function(i,value){
 
 $(window).scroll(function(){
     var a = $(this).scrollTop(); 
-    console.log(a);
     if(a >= 120){
         $("nav").css({
             position : "fixed",
